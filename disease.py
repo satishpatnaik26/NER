@@ -182,7 +182,7 @@ def NaiveBayes():
 #######################################GUI###################################################
 
 root = Tk()
-root.configure(background='blue')
+root.configure(background='#191970')
 
 Symptom1 = StringVar()
 Symptom1.set(None)
@@ -196,39 +196,37 @@ Symptom5 = StringVar()
 Symptom5.set(None)
 Name = StringVar()
 
-w2 = Label(root, justify=LEFT, text="Predicting Disease using ML", fg="white", bg="blue")
-w2.config(font=("Elephant", 30))
+w2 = Label(root, justify=LEFT, text="Predicting Disease using ML", fg="white", bg="#000000")
+w2.config(font=("CHILLER", 30))
 w2.grid(row=1, column=0, columnspan=2, padx=100)
-w2.config(font=("Aharoni", 30))
+w2.config(font=("COOPER BLACK", 30))
 w2.grid(row=2, column=0, columnspan=2, padx=100)
 
-NameLb = Label(root, text="Name of the Patient", fg="yellow", bg="black")
+NameLb = Label(root, text="Name of the Patient", fg="#00FFFF", bg="black")
 NameLb.grid(row=6, column=0, pady=15, sticky=W)
 
-
-S1Lb = Label(root, text="Symptom 1", fg="yellow", bg="black")
+S1Lb = Label(root, text="Symptom 1", fg="#00FFFF", bg="black")
 S1Lb.grid(row=7, column=0, pady=10, sticky=W)
 
-S2Lb = Label(root, text="Symptom 2", fg="yellow", bg="black")
+S2Lb = Label(root, text="Symptom 2", fg="#00FFFF", bg="black")
 S2Lb.grid(row=8, column=0, pady=10, sticky=W)
 
-S3Lb = Label(root, text="Symptom 3", fg="yellow", bg="black")
+S3Lb = Label(root, text="Symptom 3", fg="#00FFFF", bg="black")
 S3Lb.grid(row=9, column=0, pady=10, sticky=W)
 
-S4Lb = Label(root, text="Symptom 4", fg="yellow", bg="black")
+S4Lb = Label(root, text="Symptom 4", fg="#00FFFF", bg="black")
 S4Lb.grid(row=10, column=0, pady=10, sticky=W)
 
-S5Lb = Label(root, text="Symptom 5", fg="yellow", bg="black")
-S5Lb.grid(row=11, column=0, pady=10, sticky=W)
+S5Lb = Label(root, text="Symptom 5", fg="#00FFFF", bg="black")
+S5Lb.grid(row=11, column=0, pady=20, sticky=W)
 
-
-lrLb = Label(root, text="DecisionTree", fg="white", bg="red")
+lrLb = Label(root, text="POSSIBLITY #1", fg="yellow", bg="green")
 lrLb.grid(row=15, column=0, pady=10,sticky=W)
 
-destreeLb = Label(root, text="RandomForest", fg="white", bg="red")
+destreeLb = Label(root, text="POSSIBLITY #2", fg="yellow", bg="green")
 destreeLb.grid(row=17, column=0, pady=10, sticky=W)
 
-ranfLb = Label(root, text="NaiveBayes", fg="white", bg="red")
+ranfLb = Label(root, text="POSSIBLITY #3", fg="yellow", bg="green")
 ranfLb.grid(row=19, column=0, pady=10, sticky=W)
 
 OPTIONS = sorted(l1)
@@ -252,22 +250,22 @@ S5En = OptionMenu(root, Symptom5,*OPTIONS)
 S5En.grid(row=11, column=1)
 
 
-dst = Button(root, text="DecisionTree", command=DecisionTree,bg="green",fg="yellow")
+dst = Button(root, text="DECISION TREE", command=DecisionTree,bg="green",fg="yellow")
 dst.grid(row=8, column=3,padx=10)
 
-rnf = Button(root, text="Randomforest", command=randomforest,bg="green",fg="yellow")
+rnf = Button(root, text="RANDOM FOREST", command=randomforest,bg="green",fg="yellow")
 rnf.grid(row=9, column=3,padx=10)
 
-lr = Button(root, text="NaiveBayes", command=NaiveBayes,bg="green",fg="yellow")
+lr = Button(root, text="NAIVE BAYES", command=NaiveBayes,bg="green",fg="yellow")
 lr.grid(row=10, column=3,padx=10)
 
-t1 = Text(root, height=1, width=40,bg="orange",fg="black")
+t1 = Text(root, height=1, width=40,bg="#5F9EA0",fg="black")
 t1.grid(row=15, column=1, padx=10)
 
-t2 = Text(root, height=1, width=40,bg="orange",fg="black")
+t2 = Text(root, height=1, width=40,bg="#5F9EA0",fg="black")
 t2.grid(row=17, column=1 , padx=10)
 
-t3 = Text(root, height=1, width=40,bg="orange",fg="black")
+t3 = Text(root, height=1, width=40,bg="#5F9EA0",fg="black")
 t3.grid(row=19, column=1 , padx=10)
 
 root.mainloop()
